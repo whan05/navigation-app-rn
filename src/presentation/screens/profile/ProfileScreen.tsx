@@ -9,6 +9,7 @@ export const ProfileScreen = () => {
   const { top } = useSafeAreaInsets();
   const navigation = useNavigation()
 
+
   return (
     <View
       style={{

@@ -6,18 +6,18 @@ import { StackActions, useNavigation } from '@react-navigation/native'
 
 export const SettingsScreen = () => {
 
-  const natigation = useNavigation()
+  const navigation = useNavigation()
 
   return (
     <View style={ globalStyles.container}>
         <Text style={{ marginBottom: 10 }}>Settings Screen</Text>
         <PrimaryButton
           label='Regresar'
-          onPress={ () => natigation.goBack()}
+          onPress={ () => navigation.goBack()}
         />
         <PrimaryButton
           label='Regresar al Home'
-          onPress={ () => natigation.dispatch( StackActions.popToTop())}
+          onPress={ () => navigation.dispatch( StackActions.popToTop())}
         />
     </View>
   )
