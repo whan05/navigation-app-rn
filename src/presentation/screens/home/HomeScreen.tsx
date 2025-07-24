@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react'
 import { Pressable, Text, View } from 'react-native'
-import { globalStyles } from '../../theme/theme'
+import { globalColors, globalStyles } from '../../theme/theme'
 import { DrawerActions, type NavigationProp, useNavigation } from '@react-navigation/native'
 import { PrimaryButton } from '../../components/Shared/PrimaryButton'
 import { type RootStackParams } from '../../routes/StackNavigator'
+import { Ionicon } from '../../components/Shared/Ionicon'
 
 export const HomeScreen = () => {
 
@@ -12,8 +13,10 @@ export const HomeScreen = () => {
   useEffect(() => {
     navigation.setOptions({
       headerLeft: () => (
-        <Pressable onPress={ () =>  navigation.dispatch( DrawerActions.toggleDrawer)}>
-          <Text>Menu</Text>
+        <Pressable 
+          style={{ paddingLeft: 5}}
+          onPress={ () =>  navigation.dispatch( DrawerActions.toggleDrawer)}>
+         <Ionicon name='menu-outline' color={ globalColors.primary}/>
         </Pressable>
       )
     })
